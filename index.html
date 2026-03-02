@@ -1,52 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<title>Simple Shopping Cart</title>
-<link rel="stylesheet" href="styles.css">
+    <title>My Shop</title>
 </head>
 <body>
-
-<header>
-<h1>🛒 My Shop</h1>
-<a href="https://www.amazon.com" target="_blank">Visit Amazon</a>
-</header>
-
-<div class="container">
-
-<div class="items">
-<h2>Items</h2>
-
-<div class="item">
-<img src="https://via.placeholder.com/150" alt="Headphones">
-<h3>Headphones</h3>
-<p>$50</p>
-<button onclick="addToCart('Headphones', 50)">Add</button>
-</div>
-
-<div class="item">
-<img src="https://via.placeholder.com/150" alt="Keyboard">
-<h3>Keyboard</h3>
-<p>$30</p>
-<button onclick="addToCart('Keyboard', 30)">Add</button>
-</div>
-
-<div class="item">
-<img src="https://via.placeholder.com/150" alt="Mouse">
-<h3>Mouse</h3>
-<p>$20</p>
-<button onclick="addToCart('Mouse', 20)">Add</button>
-</div>
-</div>
-
-
-<div class="cart">
-<h2>Shopping Cart</h2>
-<ul id="cartList"></ul>
-<h3>Total: $<span id="total">0</span></h3>
-</div>
-
-</div>
-
+    <h1>My Shop</h1>
 </body>
+
+<a href="https://www.amazon.com" target="_blank">
+Visit Store
+</a>
+
+<p> Chair - $20</p>
+<button onclick="addItem('Chair', 20)">Add Chair</button>
+</div>
+<div>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT47cPiEm5XirFXx-hLWXYzPD6OsEk_c91oaA&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT47cPiEm5XirFXx-hLWXYzPD6OsEk_c91oaA&s" alt="first picture">
+
+
+<p> Table - $15</p>
+<button onclick="addItem('Table', 15)">Add Table</button>
+</div>
+<div>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1_U6N0sOhcquJRIE3mWrasStPOS5hyCljAA&s" alt="second picture">
+
+<p> Desk - $30</p>
+<button onclick="addItem('Desk', 30)">Add Desk</button>
+</div>
+</div>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRKpmLHbgqtfBqak6D7W5vzm9V1L4miPsAoA&s" alt="third picture">
+
+<div id="cart"></div>
+
+<script>
+function addItem(name, price) {
+let cart = document.getElementById("cart");
+let item = document.createElement("p");
+item.textContent = name + " - $" + price;
+cart.appendChild(item);
+}
+</script>
+
+
+<style>
+body {
+font-family: Arial;
+background-color: #f4f4f4;
+}
+
+.items {
+width: 40%;
+float: left;
+}
+
+.cart {
+width: 40%;
+float: right;
+background: white;
+padding: 10px;
+}
+
+button {
+background-color: blue;
+color: white;
+border: none;
+padding: 5px;
+}
+
+button:hover {
+background-color: darkblue;
+}
+</style>
+
+
+<p>Total: $<span id="total">0</span></p>
+
+<script>
+let total = 0;
+
+function addItem(name, price) {
+total += price;
+document.getElementById("total").textContent = total;
+}
+</script>
+
+
 </html>
+
