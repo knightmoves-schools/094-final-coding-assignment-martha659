@@ -12,6 +12,11 @@ the shopping cart
 - should have an image for each item
 - should contain at least one external link
 
+- For Martha
+- Chaneg each item to a flower they can buy
+- change your image to a garden
+- add 3 bullet points each with a flower they can pick and when they click the submit button. It will display which flower they have picked on the page
+
 ## Next Steps
 **Once you complete the shopping cart please:**
 1. Set up a time for a 2 hour Pairing Assessment wit your classroom guide.
