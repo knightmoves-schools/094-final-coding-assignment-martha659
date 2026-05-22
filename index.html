@@ -111,6 +111,23 @@ border-radius: 15px;
 <button   onclick="addToCart('couch', 500)">Add</button>
 </div>
 
+<button id="colorBtn">Change Background</button>
+
+<script>
+let changed = false;
+
+document.getElementById("colorBtn").onclick = function() {
+
+if (changed === false) {
+document.body.style.backgroundColor = "green";
+changed = true;
+} else {
+document.body.style.backgroundColor = "white";
+changed = false;
+}
+
+};
+</script>
 
 
 <p>
@@ -175,12 +192,10 @@ document.getElementById('selection').textContent = "You picked: " + selected;
 }
 }
 
-<span> Value </span>
 
-  <button onclick="changeColor()">Change Color</button>
-function changeColor() {
-document.body.style.backgroundColor = "blue";
-}
+
+
+
 
 
 </script>
